@@ -177,7 +177,7 @@ let loc1 = 0
 let cursor: Sprite = null
 let selectMode = 0
 scene.setBackgroundColor(12)
-tiles.setCurrentTilemap(tilemap`level1`)
+tiles.setCurrentTilemap(tilemap`level`)
 for (let i = 0; i <= 9; i++) {
     for (let j = 0; j <= 6; j++) {
         generate(i, j)
@@ -203,5 +203,5 @@ cursor = sprites.create(img`
     f . . . . . . . . . . . . . . f 
     f f f f f f f f f f f f f f f f 
     `, SpriteKind.Player)
-grid.place(cursor, tiles.getTileLocation(0, 0))
 cursor.setStayInScreen(true)
+grid.place(cursor, tiles.getTileLocation(5, 5))
